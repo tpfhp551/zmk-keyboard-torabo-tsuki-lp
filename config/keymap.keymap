@@ -152,7 +152,7 @@
 &kp TAB    &kp Q    &kp W     &kp E     &kp R               &kp T                                  &kp Y             &kp U  &kp I      &kp O           &kp P           &kp BSPC
 &kp LCTRL  &kp A    &kp S     &kp D     &kp F               &kp G        &none        &none        &kp H             &kp J  &kp K      &kp L           &kp SEMI        &kp ENTER
 &kp LSHFT  &kp Z    &kp X     &kp C     &kp V               &kp B        &kp UNDER    &kp MINUS    &kp N             &kp M  &kp COMMA  &kp DOT         &kp UP_ARROW    &kp RSHFT
-&kp LCTRL  &kp ESC  &kp LGUI  &kp LALT  &lt 3 INT_MUHENKAN  &lt 2 SPACE  &lt 2 SPACE  &lt 2 SPACE  &lt 3 INT_HENKAN  &none  &none      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp LCTRL  &kp ESC  &kp LGUI  &kp LALT  &lt 3 INT_MUHENKAN  &lt 2 SPACE  &lt 1 SPACE  &lt 2 SPACE  &lt 3 INT_HENKAN  &none  &none      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
         };
 

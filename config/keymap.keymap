@@ -19,7 +19,7 @@
         };
 
         Combo_Layer_4 {
-            bindings = <&mo 4>;
+            bindings = <&mo 0>;
             key-positions = <59 60>;
         };
     };
@@ -73,16 +73,6 @@
 &kp RETURN      &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS     &trans     &trans     &kp BACKSPACE  &kp LEFT      &kp DOWN_ARROW  &kp RIGHT       &kp PAGE_UP    &trans
 &kp RETURN      &kp DOT          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp ASTERISK  &kp SLASH  &kp LG(E)  &kp LC(LA(D))  &kp LS(HOME)  &row_select     &kp LS(END)     &kp PAGE_DOWN  &trans
 &kp LEFT_ARROW  &kp DOWN_ARROW   &kp UP_ARROW     &kt RIGHT_ARROW  &trans           &trans        &trans     &trans     &trans         &trans        &trans          &kp KP_NUMLOCK  &kp CAPS       &caps_word
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans   &trans   &trans   &trans                                &trans        &trans        &trans        &trans          &trans        &trans
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp C_BRIGHTNESS_INC                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4  &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp C_BRIGHTNESS_DEC  &trans  &trans  &bt BT_PRV    &bt BT_NXT    &trans        &trans          &trans        &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans                &trans  &trans  &trans        &trans        &trans        &trans          &trans        &trans
-&trans  &trans  &trans   &trans   &trans   &trans                &trans  &trans  &trans        &trans        &trans        &bt BT_CLR_ALL  &trans        &bt BT_CLR
             >;
         };
     };

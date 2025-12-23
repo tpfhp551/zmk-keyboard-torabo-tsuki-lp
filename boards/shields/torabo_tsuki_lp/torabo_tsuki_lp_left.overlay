@@ -4,6 +4,9 @@
 
 &zip_temp_layer {
     excluded-positions = <
+        24 // Ctrl
+        38 // Shift
+        52 // Ctrl2
         19 // U
         20 // I
         21 // O

@@ -4,9 +4,24 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 1 250>; };
+&mkp_input_listener {
+    // トラックボール入力を検知した際、自動的に smart_mouse (レイヤー1) を起動する設定
+    input-processors = <&zip_temp_layer 1 250>; 
+    // ※ すでにこの行がある場合はそのままでOKですが、
+    // 次に定義する auto-layer と連動させるため以下の behaviors が重要になります。
+};
 
 / {
+    behaviors {
+        // --- Smart Mouse の動作定義 ---
+        smart_mouse: smart_mouse {
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <1>;
+            // マウス操作（クリック、スクロール、移動）が行われている間はレイヤーを維持
+            continue-list = <MKP_LCLK MKP_RCLK MKP_MCLK MKP_MB4 MKP_MB5 MSC_SCRL_UP MSC_SCRL_DOWN MSC_SCRL_LEFT MSC_SCRL_RIGHT LSHFT LCTRL>;
+        };
+    };
+    
     combos {
         compatible = "zmk,combos";
 
@@ -31,7 +46,7 @@
 
         layer_0 {
             bindings = <
-&none             &none    &none     &none     &none        &none                                        &none       &none  &none      &none        &none                 &none
+&smart_mouse 1    &none    &none     &none     &none        &none                                        &none       &none  &none      &none        &none                 &none
 &kp TAB           &kp Q    &kp W     &kp E     &kp R        &kp T                                        &kp Y       &kp U  &kp I      &kp O        &kp P                 &kp BACKSPACE
 &kp LEFT_CONTROL  &kp A    &kp S     &kp D     &kp F        &kp G        &none           &none           &kp H       &kp J  &kp K      &kp L        &kp SEMI              &kp RETURN
 &kp LSHFT         &kp Z    &kp X     &kp C     &kp V        &kp B        &kp LANGUAGE_2  &kp LANGUAGE_1  &kp N       &kp M  &kp COMMA  &kp DOT      &mt RIGHT_SHIFT FSLH  &kp RETURN

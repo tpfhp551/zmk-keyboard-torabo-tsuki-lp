@@ -18,7 +18,7 @@
 
         dummy {
             bindings = <&none>;
-            key-positions = <33 34 35 20 49 48 47>;
+            key-positions = <33 34 35 20 49 48 47 19 21 36 50>;
         };
     };
 

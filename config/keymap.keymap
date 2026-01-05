@@ -18,7 +18,7 @@
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
             // マウス操作（クリック、スクロール、移動）が行われている間はレイヤーを維持
-            continue-list = <&mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4 &mkp MB5 &msc SCRL_UP &msc SCRL_DOWN &msc SCRL_LEFT &msc SCRL_RIGHT &kp LSHFT &kp LCTRL>;
+            continue-list = <19 20 21 33 34 35 36 47 48 49 50 24 38 52>;
         };
     };
     

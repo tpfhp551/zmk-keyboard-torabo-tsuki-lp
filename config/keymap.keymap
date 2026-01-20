@@ -62,7 +62,7 @@
         layer_1 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans          &trans          &trans           &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &mkp MB4        &msc SCRL_UP    &mkp MB5         &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &mkp MB4        &msc SCRL_UP    &mkp MB5         &kp MINUS      &kp DELETE
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &kp PAGE_UP    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp PAGE_DOWN  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans         &trans
@@ -75,7 +75,7 @@
 &trans  &kp DOUBLE_QUOTES  &kp SQT        &kp LESS_THAN     &kp GREATER_THAN   &kp GRAVE                     &kp EXCLAMATION  &kp QUESTION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS          &kp DELETE
 &trans  &kp HASH           &kp AMPERSAND  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp TILDE  &trans  &trans     &kp PLUS         &kp MINUS     &kp SEMICOLON         &kp COLON              &kp PIPE           &trans
 &trans  &kp DOLLAR         &kp PERCENT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LCTRL  &kp AT  &kp EQUAL  &kp ASTERISK     &kp SLASH     &kp COMMA             &kp PERIOD             &kp BACKSLASH      &trans
-&trans  &trans             &trans         &trans            &trans             &trans     &trans  &trans     &trans           &trans        &trans                &kp K_MUTE             &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&trans  &trans             &trans         &trans            &trans             &trans     &trans  &trans     &trans           &trans        &trans                &kp C_MUTE             &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
             >;
         };
 

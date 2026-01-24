@@ -7,14 +7,7 @@
 &mkp_input_listener { input-processors = <&zip_temp_layer 1 250>; };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        qqqesdfhjklpn. {
-            bindings = <&none>;
-            key-positions = <24 38 52 15 26 27 28 32 33 34 35 36 46 50>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         row_select: row_select {

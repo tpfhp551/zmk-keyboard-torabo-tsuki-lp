@@ -10,12 +10,6 @@
     combos {
         compatible = "zmk,combos";
 
-        bt_clear {
-            bindings = <&bt BT_CLR>;
-            key-positions = <28 29>;
-            layers = <2>;
-        };
-
         dummy {
             bindings = <&none>;
             key-positions = <24 52 38 27 27 34 33 35 36 50 32 46 28 15 26>;

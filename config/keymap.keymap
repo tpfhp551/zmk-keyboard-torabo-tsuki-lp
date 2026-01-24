@@ -10,9 +10,9 @@
     combos {
         compatible = "zmk,combos";
 
-        dummy {
+        qqqesdfhjklpn. {
             bindings = <&none>;
-            key-positions = <24 52 38 27 27 34 33 35 36 50 32 46 28 15 26>;
+            key-positions = <24 38 52 15 26 27 28 32 33 34 35 36 46 50>;
         };
     };
 

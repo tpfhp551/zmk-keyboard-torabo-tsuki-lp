@@ -73,11 +73,11 @@
 
         layer_5 {
             bindings = <
-&trans  &trans            &trans            &trans          &trans           &trans                     &trans           &trans          &trans          &trans           &trans            &trans
-&trans  &msc MOVE_Y(20)   &msc MOVE_Y(15)   &msc SCRL_UP    &msc MOVE_Y(5)   &none                      &none            &mkp MB4        &msc SCRL_UP    &mkp MB5         &none             &trans
-&trans  &msc MOVE_Y(-20)  &msc MOVE_Y(-15)  &msc SCRL_DOWN  &msc MOVE_Y(-5)  &none   &trans     &trans  &msc MOVE_Y(5)   &mkp LCLK       &mkp MCLK       &mkp RCLK        &msc MOVE_Y(20)   &trans
-&trans  &none             &msc SCRL_LEFT    &none           &msc SCRL_RIGHT  &none   &kp LC(L)  &kp F5  &msc MOVE_Y(-5)  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &msc MOVE_Y(-20)  &trans
-&trans  &trans            &trans            &trans          &trans           &trans  &trans     &trans  &trans           &trans          &trans          &trans           &trans            &trans
+&trans  &trans            &trans            &trans          &trans           &trans                     &trans            &trans          &trans          &trans           &trans            &trans
+&trans  &msc MOVE_Y(100)  &msc MOVE_Y(20)   &msc SCRL_UP    &msc MOVE_Y(5)   &none                      &none             &mkp MB4        &msc SCRL_UP    &mkp MB5         &none             &trans
+&trans  &msc MOVE_Y(-100) &msc MOVE_Y(-20)  &msc SCRL_DOWN  &msc MOVE_Y(-5)  &none   &trans     &trans  &msc MOVE_Y(100)  &mkp LCLK       &mkp MCLK       &mkp RCLK        &msc MOVE_Y(20)   &tran-
+&trans  &none             &msc SCRL_LEFT    &none           &msc SCRL_RIGHT  &none   &kp LC(L)  &kp F5  &msc MOVE_Y(-100) &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &msc MOVE_Y(-20)  &trans
+&trans  &trans            &trans            &trans          &trans           &trans  &trans     &trans  &trans            &trans          &trans          &trans           &trans            &trans
             >;
         };
     };

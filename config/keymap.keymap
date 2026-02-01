@@ -7,7 +7,7 @@
 &mkp_input_listener { input-processors = <&zip_temp_layer 1 10000>; };
 
 &lt {
-tapping-term-ms = <100>;        /* 単発：<msec>待ったらレイヤーにする */
+    tapping-term-ms = <100>;        /* 単発：<msec>待ったらレイヤーにする */
     quick-tap-ms = <80>;       /* 連打：<msec>以内に2回目を叩いたら即スペースにする */
     flavor = "tap-preferred";   /* 判定：時間内ならタップを優先する */
 };
@@ -31,7 +31,7 @@ tapping-term-ms = <100>;        /* 単発：<msec>待ったらレイヤーにす
             #binding-cells = <2>;
             bindings = <&mo>, <&to>;
 
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
             flavor = "balanced";
         };
     };

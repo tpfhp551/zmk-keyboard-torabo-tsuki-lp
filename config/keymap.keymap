@@ -7,8 +7,8 @@
 &mkp_input_listener { input-processors = <&zip_temp_layer 1 10000>; };
 
 &lt {
-    tapping-term-ms = <100>;        /* 単発：<msec>待ったらレイヤーにする */
-    quick-tap-ms = <80>;       /* 連打：<msec>以内に2回目を叩いたら即スペースにする */
+    tapping-term-ms = <150>;        /* 単発：<msec>待ったらレイヤーにする */
+    quick-tap-ms = <100>;       /* 連打：<msec>以内に2回目を叩いたら即スペースにする */
     flavor = "tap-preferred";   /* 判定：時間内ならタップを優先する */
 };
 

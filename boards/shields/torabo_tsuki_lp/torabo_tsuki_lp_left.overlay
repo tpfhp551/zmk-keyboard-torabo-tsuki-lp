@@ -4,17 +4,14 @@
 
 &zip_temp_layer {
     excluded-positions = <
-        24 // Ctrl
-        38 // Shift
-        52 // Ctrl2
         33 // J
         34 // K
         35 // L
         36 // :
+        48 // ,
         50 // /
-        57 // Space
-        58 // Space
-        59 // Space
+        58 // space left3
+        59 // space right1
     >;
 };
 

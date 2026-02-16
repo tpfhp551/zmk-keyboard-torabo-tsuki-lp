@@ -13,7 +13,24 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        Function_layer {
+            bindings = <&mo 5>;
+            key-positions = <57 56>;
+        };
+
+        mouse {
+            bindings = <&mo 2>;
+            key-positions = <59 60>;
+        };
+
+        bluetooth_layer {
+            bindings = <&mo 6>;
+            key-positions = <57 58 59>;
+        };
+    };
 
     macros {
         row_select: row_select {
@@ -91,21 +108,24 @@
 
         layer_5 {
             bindings = <
-&trans  &trans        &trans        &trans        &trans        &trans                        &trans  &trans  &trans   &trans      &trans      &trans
-&trans  &trans        &trans        &trans        &trans        &trans                        &trans  &kp F1  &kp F2   &kp F3      &kp F4      &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &kp F5  &kp F6   &kp F7      &kp F8      &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &kp F9  &kp F10  &kp F11     &kp F12     &trans
-&trans  &bt BT_CLR    &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans   &bt BT_PRV  &bt BT_NXT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                   &trans  &trans  &trans   &trans   &trans   &trans
+&trans  &none   &kp F7  &kp F8  &kp F9  &kp F12                  &none   &kp F1  &kp F2   &kp F3   &kp F4   &trans
+&trans  &none   &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans  &none   &kp F5  &kp F6   &kp F7   &kp F8   &trans
+&trans  &none   &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &none   &kp F9  &kp F10  &kp F11  &kp F12  &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans          &trans                                 &trans        &trans        &trans        &trans          &trans        &trans
+&trans  &none   &none   &none   &kp KP_NUMLOCK  &kp INSERT                             &none         &none         &none         &none           &none         &trans
+&trans  &none   &none   &none   &caps_word      &kp CAPSLOCK  &trans       &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4  &trans
+&trans  &none   &none   &none   &none           &none         &bootloader  &sys_reset  &bt BT_PRV    &bt BT_NXT    &none         &none           &none         &trans
+&trans  &trans  &trans  &trans  &trans          &trans        &trans       &trans      &trans        &trans        &trans        &bt BT_CLR_ALL  &bt BT_CLR    &trans
             >;
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        Function {
-            if-layers = <3 4>;
-            then-layer = <5>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };

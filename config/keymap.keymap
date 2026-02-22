@@ -7,7 +7,13 @@
 &mkp_input_listener { input-processors = <&zip_temp_layer 1 1000>; };
 
 &lt {
-    tapping-term-ms = <240>;        /* 単発：<msec>待ったらレイヤーにする */
+    tapping-term-ms = <240>;    /* 単発：<msec>待ったらレイヤーにする */
+    quick-tap-ms = <200>;       /* 連打：<msec>以内に2回目を叩いたら即スペースにする */
+    flavor = "tap-preferred";   /* 判定：時間内ならタップを優先する */
+};
+
+&mt {
+    tapping-term-ms = <240>;    /* 単発：<msec>待ったらレイヤーにする */
     quick-tap-ms = <200>;       /* 連打：<msec>以内に2回目を叩いたら即スペースにする */
     flavor = "tap-preferred";   /* 判定：時間内ならタップを優先する */
 };

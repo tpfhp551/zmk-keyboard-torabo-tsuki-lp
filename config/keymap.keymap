@@ -69,6 +69,24 @@
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
         };
+
+        msc_v_up: msc_v_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MSC_V_UP";
+            bindings = <&msc MOVE_Y(20)>, <&msc MOVE_Y(10)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        msc_v_down: msc_v_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MSC_V_DOWN";
+            bindings = <&msc MOVE_Y(-20)>, <&msc MOVE_Y(-10)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -96,11 +114,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans          &trans           &trans            &trans             &trans                              &trans     &trans          &trans       &trans           &trans             &trans
-&trans  &msc SCRL_LEFT  &msc SCRL_RIGHT  &kp LC(LS(TAB))   &kp LC(TAB)        &kp LC(L)                           &kp F5     &mkp MB4        &kp LC(TAB)  &mkp MB5         &msc MOVE_Y(100)   &trans
-&trans  &kp LCTRL       &msc SCRL_UP     &msc MOVE_Y(20)   &msc MOVE_Y(100)   &msc MOVE_Y(1000)   &trans  &trans  &kp LG(L)  &mkp LCLK       &mkp MCLK    &mkp RCLK        &msc MOVE_Y(20)    &trans
-&trans  &kp LSHIFT      &msc SCRL_DOWN   &msc MOVE_Y(-20)  &msc MOVE_Y(-100)  &msc MOVE_Y(-1000)  &to 0   &to 0   &kp LC(L)  &msc SCRL_LEFT  &to 0        &msc SCRL_RIGHT  &msc MOVE_Y(-20)   &trans
-&trans  &trans          &trans           &trans            &trans             &trans              &trans  &trans  &trans     &trans          &trans       &trans           &msc MOVE_Y(-100)  &trans
+&trans  &trans          &trans           &trans            &trans             &trans                              &trans     &trans          &trans       &trans           &trans       &trans
+&trans  &msc SCRL_LEFT  &msc SCRL_RIGHT  &kp LC(LS(TAB))   &kp LC(TAB)        &kp LC(L)                           &kp F5     &mkp MB4        &kp LC(TAB)  &mkp MB5         &kp MINUS    &trans
+&trans  &kp LCTRL       &msc SCRL_UP     &msc MOVE_Y(20)   &msc MOVE_Y(100)   &msc MOVE_Y(1000)   &trans  &trans  &kp LG(L)  &mkp LCLK       &mkp MCLK    &mkp RCLK        &msc_v_up    &trans
+&trans  &kp LSHIFT      &msc SCRL_DOWN   &msc MOVE_Y(-20)  &msc MOVE_Y(-100)  &msc MOVE_Y(-1000)  &to 0   &to 0   &kp LC(L)  &msc SCRL_LEFT  &to 0        &msc SCRL_RIGHT  &msc_v_down  &trans
+&trans  &trans          &trans           &trans            &trans             &trans              &trans  &trans  &trans     &trans          &trans       &trans           &trans       &trans
             >;
         };
 
@@ -116,11 +134,11 @@
 
         layer_4 {
             bindings = <
-&trans  &trans                 &trans              &trans              &trans           &trans                               &trans         &trans        &trans          &trans             &trans            &trans
-&trans  &kp PERIOD             &kp KP_NUMBER_7     &kp KP_NUMBER_8     &kp KP_NUMBER_9  &kp PLUS                             &none          &kp HOME      &kp UP          &kp END            &kp MINUS         &trans
-&trans  &hm LCTRL KP_NUMBER_0  &kp KP_NUMBER_4     &kp KP_NUMBER_5     &kp KP_NUMBER_6  &kp MINUS     &trans     &trans      &kp PAGE_UP    &kp LEFT      &kp DOWN_ARROW  &kp RIGHT          &msc MOVE_Y(20)   &trans
-&trans  &hm LSHIFT ENTER       &kp KP_NUMBER_1     &kp KP_NUMBER_2     &kp KP_NUMBER_3  &kp ASTERISK  &kp SLASH  &kp LG(E)   &kp PAGE_DOWN  &kp LS(HOME)  &row_select     &kp LS(END)        &msc MOVE_Y(-20)  &trans
-&trans  &mt LCTRL BACKSPACE    &mt LEFT_WIN COLON  &mt LEFT_ALT EQUAL  &trans           &trans        &trans     &kp DELETE  &trans         &trans        &trans          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &trans
+&trans  &trans                 &trans              &trans              &trans           &trans                               &trans         &trans        &trans          &trans             &trans           &trans
+&trans  &kp PERIOD             &kp KP_NUMBER_7     &kp KP_NUMBER_8     &kp KP_NUMBER_9  &kp PLUS                             &none          &kp HOME      &kp UP          &kp END            &kp MINUS        &trans
+&trans  &hm LCTRL KP_NUMBER_0  &kp KP_NUMBER_4     &kp KP_NUMBER_5     &kp KP_NUMBER_6  &kp MINUS     &trans     &trans      &kp PAGE_UP    &kp LEFT      &kp DOWN_ARROW  &kp RIGHT          &msc_v_up        &trans
+&trans  &hm LSHIFT ENTER       &kp KP_NUMBER_1     &kp KP_NUMBER_2     &kp KP_NUMBER_3  &kp ASTERISK  &kp SLASH  &kp LG(E)   &kp PAGE_DOWN  &kp LS(HOME)  &row_select     &kp LS(END)        &msc_v_down      &trans
+&trans  &mt LCTRL BACKSPACE    &mt LEFT_WIN COLON  &mt LEFT_ALT EQUAL  &trans           &trans        &trans     &kp DELETE  &trans         &trans        &trans          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans
             >;
         };
 

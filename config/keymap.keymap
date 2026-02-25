@@ -73,16 +73,16 @@
         msc_v_up: msc_v_up {
             compatible = "zmk,behavior-mod-morph";
             label = "MSC_V_UP";
-            bindings = <&msc SCRL_Y(20)>, <&msc SCRL_Y(50)>;
+            bindings = <&msc MOVE_Y(20)>, <&msc MOVE_Y(50)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>; 
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         msc_v_down: msc_v_down {
             compatible = "zmk,behavior-mod-morph";
             label = "MSC_V_DOWN";
-            bindings = <&msc SCRL_Y(-20)>, <&msc SCRL_Y(-50)>;
+            bindings = <&msc MOVE_Y(-20)>, <&msc MOVE_Y(-50)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;

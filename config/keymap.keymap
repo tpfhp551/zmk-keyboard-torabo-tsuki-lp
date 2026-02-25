@@ -76,7 +76,7 @@
             bindings = <&msc MOVE_Y(20)>, <&msc MOVE_Y(10)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         msc_v_down: msc_v_down {

@@ -7,16 +7,16 @@
 &mkp_input_listener { input-processors = <&zip_temp_layer 1 1000>; };
 
 &trackball_listener {
+    // 加速用スクロール
+    scroll_fast {
+        layers = <8>;
+        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 3>;
+    };
+
     // 通常スクロール（1 6）
     scroll_normal {
         layers = <7>;
         input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 6>;
-    };
-    
-    // 加速用スクロール（1 3）
-    scroll_fast {
-        layers = <8>; // 加速用の新しいレイヤー
-        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 3>;
     };
 };
 

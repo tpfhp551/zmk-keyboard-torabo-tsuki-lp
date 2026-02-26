@@ -6,6 +6,13 @@
 
 &mkp_input_listener { input-processors = <&zip_temp_layer 1 1000>; };
 
+&trackball_listener {
+    scroll_mode {
+        layers = <7>; // トグルで呼び出すレイヤー番号
+        input-processors = <&zip_xy_to_scroll_mapper>;
+    };
+};
+
 &lt {
     tapping-term-ms = <240>;    /* 単発：<msec>待ったらレイヤーにする */
     quick-tap-ms = <200>;       /* 連打：<msec>以内に2回目を叩いたら即スペースにする */

@@ -1,5 +1,6 @@
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -7,10 +8,10 @@
 &mkp_input_listener { input-processors = <&zip_temp_layer 1 2000>; };
 
 &trackball_listener {
-    // 【精密操作モード】Layer 9がオンの間、カーソル速度を 1/3 にする
+    // 精密操作モード：方向を反転して直しつつ、速度を1/3にする
     pointer_slow {
         layers = <9>;
-        input-processors = <&zip_xy_scaler 1 3>;
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 3>;
     };
 
     // 加速用スクロール

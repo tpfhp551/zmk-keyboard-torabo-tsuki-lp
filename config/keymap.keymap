@@ -8,12 +8,14 @@
 
 &trackball_listener {
     // 加速用スクロール
+
     scroll_fast {
         layers = <8>;
         input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 3>;
     };
 
     // 通常スクロール（1 6）
+
     scroll_normal {
         layers = <7>;
         input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 6>;
@@ -41,7 +43,7 @@
             key-positions = <57 56>;
         };
 
-        mouse {
+        mouse_button {
             bindings = <&mo 2>;
             key-positions = <59 60>;
         };
@@ -51,8 +53,8 @@
             key-positions = <57 58 59>;
         };
 
-        tog_scroll_layer {
-            bindings = <&tog 7>;
+        mo_scroll_layer {
+            bindings = <&mo 7>;
             key-positions = <34 35>;
         };
 
@@ -130,7 +132,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                             &trans  &trans     &trans  &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                             &trans  &trans     &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans          &trans  &trans  &mkp LCLK  &trans  &mkp RCLK  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans          &trans  &trans  &mkp LCLK  &mo 9   &mkp RCLK  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans     &trans          &trans  &trans  &trans     &trans  &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp LEFT_SHIFT  &trans  &trans  &trans     &trans  &trans     &trans  &trans
             >;
@@ -203,6 +205,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_9 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                             &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                             &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans          &trans  &trans  &mkp LCLK  &trans  &mkp RCLK  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &to 0           &trans  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp LEFT_SHIFT  &trans  &trans  &trans     &trans  &trans     &trans  &trans
             >;
         };
     };

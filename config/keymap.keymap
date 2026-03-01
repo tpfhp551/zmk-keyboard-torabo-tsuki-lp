@@ -100,6 +100,7 @@
         mo_scroll_layer {
             bindings = <&mo 7>;
             key-positions = <34 35>;
+            timeout-ms = <75>;
         };
 
         tog_mouse_layer {

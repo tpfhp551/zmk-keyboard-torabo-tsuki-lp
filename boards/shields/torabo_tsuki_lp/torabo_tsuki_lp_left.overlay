@@ -9,6 +9,8 @@
         34 // K
         35 // L
         48 // ,
+        50 // Back Space
+        56 // space left1
         57 // space left2
         58 // space left3
     >;

@@ -6,9 +6,11 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // オートマウスレイヤーの設定
+
 &mkp_input_listener { input-processors = <&zip_temp_layer 1 2000>; };
 
 // オートマウスレイヤーの除外キーポジション設定
+
 &zip_temp_layer {
     excluded-positions = <
         20 // I
@@ -24,12 +26,14 @@
 };
 
 // トラックボールの設定
+
 &trackball_listener {
-    input-processors = 
+    input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
         <&zip_temp_layer 1 2000>;
 
     // 精密操作モード：方向を反転して直しつつ、速度を1/2にする
+
     pointer_slow {
         layers = <9>;
         input-processors =
@@ -38,6 +42,7 @@
     };
 
     // 加速用スクロール
+
     scroll_fast {
         layers = <8>;
         input-processors =
@@ -47,6 +52,7 @@
     };
 
     // 通常スクロール
+
     scroll_normal {
         layers = <7>;
         input-processors =
@@ -57,6 +63,7 @@
 };
 
 // &ltの誤動作防止設定
+
 &lt {
     tapping-term-ms = <240>;    /* 単発：<msec>待ったらレイヤーにする */
     quick-tap-ms = <200>;       /* 連打：<msec>以内に2回目を叩いたら即スペースにする */
@@ -64,12 +71,12 @@
 };
 
 // &mtの誤動作防止設定
+
 &mt {
     tapping-term-ms = <240>;    /* 単発：<msec>待ったらレイヤーにする */
     quick-tap-ms = <200>;       /* 連打：<msec>以内に2回目を叩いたら即スペースにする */
     flavor = "tap-preferred";   /* 判定：時間内ならタップを優先する */
 };
-
 
 / {
     combos {
@@ -167,11 +174,11 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans  &trans  &mkp LCLK  &mo 9   &mkp RCLK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans  &trans  &trans     &trans  &trans     &mo 9   &trans
-&trans  &trans  &trans  &trans  &mo 9   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans  &trans  &mkp LCLK  &mkp RCLK  &mo 9   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &mo 9   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans  &trans  &trans     &trans     &trans  &trans  &trans
             >;
         };
 
@@ -247,11 +254,11 @@
 
         layer_9 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans  &trans  &mkp LCLK  &trans  &mkp RCLK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &to 0             &trans  &trans  &trans     &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &to 0             &trans  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans  &trans  &trans     &trans     &trans  &trans  &trans
             >;
         };
     };

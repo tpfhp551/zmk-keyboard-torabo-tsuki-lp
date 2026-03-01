@@ -178,7 +178,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans  &trans  &mkp LCLK  &mkp RCLK  &mo 9   &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &mo 9   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &mo 9   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &to 0   &to 0   &trans     &trans     &trans  &trans  &trans
             >;
         };
 
@@ -257,8 +257,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &to 0             &trans  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &to 0   &to 0   &trans     &trans     &trans  &trans  &trans
             >;
         };
     };

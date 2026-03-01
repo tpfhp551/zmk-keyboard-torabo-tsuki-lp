@@ -7,7 +7,7 @@
 
 // オートマウスレイヤーの設定
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 1 2000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 1 500>; };
 
 // オートマウスレイヤーの除外キーポジション設定
 

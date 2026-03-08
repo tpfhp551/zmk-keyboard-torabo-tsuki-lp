@@ -102,11 +102,15 @@
             key-positions = <34 35>;
             timeout-ms = <75>;
             require-prior-idle-ms = <150>;
+            slow-release;
         };
 
         tog_mouse_layer {
             bindings = <&tog 2>;
             key-positions = <20 21>;
+            slow-release;
+            timeout-ms = <75>;
+            require-prior-idle-ms = <150>;
         };
     };
 

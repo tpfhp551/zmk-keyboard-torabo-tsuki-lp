@@ -170,21 +170,21 @@
 
         layer_0 {
             bindings = <
-&none  &none             &none     &none     &none             &none                                                          &none             &none  &none      &none    &none          &none
-&none  &kp Q             &kp W     &kp E     &kp R             &kp T                                                          &kp Y             &kp U  &kp I      &kp O    &kp P          &none
-&none  &hm LCTRL A       &kp S     &kp D     &kp F             &kp G                 &none                   &none            &kp H             &kp J  &kp K      &kp L    &kp ENTER      &none
-&none  &hm LSHIFT Z      &kp X     &kp C     &kp V             &kp B                 &kp LG(E)               &to 2            &kp N             &kp M  &kp COMMA  &kp DOT  &kp ENTER      &none
-&none  &mt LCTRL ESCAPE  &kp LGUI  &kp LALT  &lt 4 LANGUAGE_2  &mt LEFT_SHIFT SPACE  &mt LEFT_CONTROL SPACE  &lt 3 BACKSPACE  &lt 4 LANGUAGE_1  &none  &none      &kp TAB  &kp BACKSPACE  &none
+&none  &none             &none     &none     &none             &none                                                   &none             &none  &none      &none    &none          &none
+&none  &kp Q             &kp W     &kp E     &kp R             &kp T                                                   &kp Y             &kp U  &kp I      &kp O    &kp P          &none
+&none  &hm LCTRL A       &kp S     &kp D     &kp F             &kp G            &none                 &none            &kp H             &kp J  &kp K      &kp L    &kp ENTER      &none
+&none  &hm LSHIFT Z      &kp X     &kp C     &kp V             &kp B            &kp LG(E)             &to 2            &kp N             &kp M  &kp COMMA  &kp DOT  &kp ENTER      &none
+&none  &mt LCTRL ESCAPE  &kp LGUI  &kp LALT  &lt 4 LANGUAGE_2  &mt LCTRL SPACE  &mt LEFT_SHIFT SPACE  &lt 3 BACKSPACE  &lt 4 LANGUAGE_1  &none  &none      &kp TAB  &kp BACKSPACE  &none
             >;
         };
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans  &trans  &mkp LCLK  &mo 9   &mkp RCLK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans  &trans  &trans     &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &mo 9   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &to 0   &to 0   &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &mkp LCLK  &mo 9   &mkp RCLK  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &mo 9   &kp LCTRL  &kp LSHFT  &to 0   &to 0   &trans     &trans  &trans     &trans  &trans
             >;
         };
 
@@ -260,11 +260,11 @@
 
         layer_9 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans     &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans  &trans  &mkp LCLK  &trans  &mkp RCLK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans  &trans  &trans     &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &to 0   &to 0   &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                             &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                             &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans          &trans  &trans  &mkp LCLK  &trans  &mkp RCLK  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans          &trans  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp LEFT_SHIFT  &to 0   &to 0   &trans     &trans  &trans     &trans  &trans
             >;
         };
     };
